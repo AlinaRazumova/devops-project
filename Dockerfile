@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install --user -r requirements.txt
 
 # ==== Stage 2: Run ====
-FROM python:3.9-slim
+FROM python:3.9-slim as runner
 
 WORKDIR /app
 
