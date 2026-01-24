@@ -1,0 +1,5 @@
+name: "Hello Custom Action"
+description: "My first custom GitHub Action"
+runs:
+  using: "docker"
+  image: "Dockerfile"
