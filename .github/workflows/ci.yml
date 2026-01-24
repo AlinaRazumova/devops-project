@@ -33,3 +33,10 @@ jobs:
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+  deployRender:
+      needs: call-docker-build
+      runs-on: ubuntu-latest
+      steps:
+      - name: Render Deploy
+        run: curl -X POST ${{ secrets.DEPLOY_HOOK }}

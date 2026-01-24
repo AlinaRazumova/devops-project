@@ -5,7 +5,7 @@ import time
 
 app = Flask(__name__)
 
-# Ждём базу данных
+
 time.sleep(5)
 
 def get_connection():
@@ -24,7 +24,7 @@ def movies():
         );
     """)
 
-    # Проверим, есть ли данные
+
     cur.execute("SELECT COUNT(*) FROM movies;")
     count = cur.fetchone()[0]
     if count == 0:
