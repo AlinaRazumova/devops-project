@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Cześć z mojej własnej akcji!"
+echo "Ręce precz od moich Actions!"
