@@ -43,9 +43,9 @@ def movies():
 
     return jsonify([{"title": row[0], "year": row[1]} for row in rows])
 
-@app.route("/")
-def home():
-    return "Привет! Перейди на /movies чтобы увидеть список фильмов."
+@app.get("/")
+def read_root():
+    return {"message": "Hi"}
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
